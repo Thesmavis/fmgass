@@ -1,0 +1,68 @@
+
+GET/api/vendors/ [name='getall']
+GET/api/vendors/<int:id>/{vendorid} [name='byid']
+PUT/api/vendors/<int:id>/{vendorid} [name='patch']
+DELETE/api/vendors/<int:id>/{vendorid} [name='delete']
+
+GET/api/purchase_orders/ [name='getall1']
+GET/api/purchase_orders/<int:id>/{poid} [name='byid1']
+PUT/api/purchase_orders/<int:id>/{poid}[name='patch1']
+DELETE/api/purchase_orders/<int:id>/{poid} [name='delete1']
+
+POST/api/purchase_orders/<int:id>{poid}/acknowledge/
+GET/api/vendors/<int:id>{vendorid}/performance/
+
+POST/api/vendors/ [name='create'
+{
+    "name":"RO CONSULTANCY",
+    "contact_details":"888754621",
+    "address":"BANGLORE",
+    "vendor_code":"V01",
+    "on_time_delivery_rate": null,
+    "quality_rating_avg": null,
+    "average_response_time": null,
+    "fulfillment_rate": null
+}
+
+
+POST/api/purchase_orders/ [name='create1']
+
+ {
+        
+        "po_number": "FMG/2023-24/002",
+        "order_date": "2023-11-25T06:00:00Z",
+        "ex_delivery_date": "2023-11-29T12:00:00Z",
+        "act_delivery_date": "2023-11-28T06:00:00Z",
+        "items": {
+            "RE": "10",
+            "FE": "20",
+            "LE": "30"
+        },
+        "quantity": 60,
+        "status": 5,
+        "quality_rating": 3,
+        "issue_date": "2023-11-26T06:00:00Z",
+        "acknowledgment_date":"2023-11-28T06:00:00Z",
+        "vendor": 2
+    }
+
+
+
+{
+
+    "vendor": 2,
+    "po_number": "FMG/2023-24/005",
+    "order_date": "2023-11-25T06:00:00Z",
+    "ex_delivery_date": "2023-11-29T12:00:00Z",
+    "act_delivery_date": "2023-11-28T06:00:00Z",
+    "items": {
+        "RE": "10",
+        "FE": "20",
+        "LE": "50"
+    },
+    "quantity": 60,
+    "status": 5,
+    "quality_rating": 5,
+    "issue_date":"2023-11-25T06:00:00Z",
+    "acknowledgment_date":"2023-11-30T06:00:00Z"
+}
