@@ -47,7 +47,7 @@ POST/api/purchase_orders/ [name='create1']
     }
 
 
-
+POST/api/purchase_orders/<int:id>{poid}/acknowledge/
 {
 
     "vendor": 2,
